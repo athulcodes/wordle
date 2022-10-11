@@ -323,7 +323,7 @@ function displayLetter(letter) {
   letter++;
 }
 
-function adelereLetter() {
+function addLetter() {
   if (entered.length > 0) {
     entered.pop();
     let elId = `c${entered.length + 1}l${line}`;
@@ -398,13 +398,13 @@ document.querySelectorAll(".letter").forEach((el) => {
         window.alert("Enter sufficient letters");
         i;
       } else {
-        validarentered();
+        validateEntry();
         line++;
         entered = [];
       }
     } else {
       entered.push(letter);
-      exibeletter(letter);
+      displayLetter(letter);
     }
   });
 });
